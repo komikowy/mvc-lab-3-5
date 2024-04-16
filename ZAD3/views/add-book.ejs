@@ -1,0 +1,22 @@
+<!-- views/add-book.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+</head>
+<body>
+    <%- include('partials/navigation') %> <!-- Correct usage of include -->
+    <h1>Add New Book</h1>
+    <form action="/book/add" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br>
+        <label for="publishingYear">Publishing Year:</label>
+        <input type="number" id="publishingYear" name="publishingYear" required><br>
+        <label for="authorId">Author ID:</label>
+        <input type="number" id="authorId" name="authorId" required><br>
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>
